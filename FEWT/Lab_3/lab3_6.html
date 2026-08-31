@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab3_6</title>
+</head>
+<body>
+    <script>
+
+        n=parseInt(prompt("Enter the number:"));
+
+        temp=n;
+        count=0,digi=0,sum=0;
+
+        while(n!=0){
+            n=n/10;
+            count++;
+        }
+
+        while(n!=0){
+            digit=n%10;
+            sum=sum + pow(digit,count);
+            n=n/10;
+        }
+
+        if(sum==temp){
+            document.write(temp+" Is Armstrong number");
+        }
+        else{
+            document.write(temp+" Is not Armstrong number");
+        }
+
+    </script>
+</body>
+</html>
