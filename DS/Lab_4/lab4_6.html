@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab4_6</title>
+</head>
+<body>
+    <script>
+
+        n=parseInt(prompt("Enter the number:"));
+
+        if(isNaN(n)){
+            document.write("not a number");
+        }
+        else if(n<0  || n>999){
+            document.write("Out of range");
+        }
+        else{
+            ans=""
+            onse=["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","forteen","fifteen","sixteen","seventeen","eighteen","ninteen"]
+            tens=["twenty","thirty","forty","fifty","sixty","seventy","eighty","ninty"];
+            hundreds=["one hundred","two hundred","three hundred","four hundred","five hundred","six hundred","seven hundred","eight hundred","nine hundred"]
+
+            if(n>99){
+                ans=ans+hundreds[parseInt(n/100)-1];
+                n=n%100;
+            }
+
+            if(n>19){
+                ans=ans+tens[parseInt(n/10)-2]
+                n=n%10;
+            }
+
+            if(n>=0){
+                ans=ans+onse[parseInt(n)];
+            }
+            document.write("number in word "+ans);
+        }
+
+    </script>
+</body>
+</html>

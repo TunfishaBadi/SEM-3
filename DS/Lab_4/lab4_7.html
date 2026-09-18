@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab4_7</title>
+</head>
+
+<body>
+    <script>
+        word = prompt("Enter the word:");
+
+        first = word.indexOf("a");
+        last = word.lastIndexOf("a");
+        ans = word.substring(first + 1, last);
+
+        document.write("first index of a:" + first + "<br\>");
+        document.write("last index of a:" + last + "<br\>");
+        document.write("string of between:" + ans);
+
+    </script>
+</body>
+
+</html>
